@@ -9,8 +9,14 @@ const PORT = process.env.PORT || 8080;
 // Priority Serve the main react file
 app.use(express.static(path.resolve(__dirname, '../client/build')));
 
-io.on('connection', function(socket){
+io.on('connection', socket => {
   console.log('a user connected');
+
+
+  socket.on('message', (message) => {
+    console.log(`message: ${message}`);
+    io.emit('message', message);
+  })
 });
 
 server.listen(PORT, () => {
