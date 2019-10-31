@@ -4,6 +4,9 @@
   "description": "Awesome Chat Application",
   "main": "src/server/index.js",
   "scripts": {
+    "start": "nodemon ./src/server/index.js",
+    "installall": "npm install & cd src/client && npm install",
+    "buildall": "cd src/client && npm run build",
     "test": "npm test"
   },
   "repository": {
@@ -21,7 +24,11 @@
   },
   "homepage": "https://github.com/coleworsley/chat#readme",
   "dependencies": {
+    "concurrently": "^5.0.0",
     "express": "^4.17.1",
     "socket.io": "^2.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
   }
 }
