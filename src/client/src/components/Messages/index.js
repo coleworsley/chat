@@ -1,12 +1,19 @@
 import React from 'react';
-import { Input } from './Input';
-import { List } from './List';
+import io from 'socket.io-client';
+import { SocketContext } from '../../context';
+import { MessageForm } from './MessageForm';
+import { MessageList } from './MessageList';
+
+const HOST = 'http://localhost:8080';
+const socket = io(HOST);
 
 export const Messages = () => {
   return (
     <React.Fragment>
-      <List />
-      <Input />
+      <SocketContext.Provider value={({socket})}>
+        <MessageList />
+        <MessageForm />
+      </SocketContext.Provider>
     </React.Fragment>
   )
 }

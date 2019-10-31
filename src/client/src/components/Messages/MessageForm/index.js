@@ -1,23 +1,23 @@
 import React, { useState, useContext } from 'react';
-import { SocketContext } from '../../../context';
+import { SocketContext, UserContext } from '../../../context';
 import './index.css';
 
-export const Input = () => {
+export const MessageForm = () => {
   const [message, addMessage] = useState('');
   const { socket } = useContext(SocketContext);
+  const { name } = useContext(UserContext);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     socket.emit('message', {
       message,
-      author: 'Cole'
+      name
     });
     addMessage('');
-  }
+  };
 
   return (
-    <React.Fragment>
-      <form onSubmit={e => handleSubmit(e)}>
+      <form onSubmit={e => handleSubmit(e)} className="MessageForm">
         <input
           id="message"
           placeholder="Enter a message..."
@@ -26,6 +26,5 @@ export const Input = () => {
         />
         <button type="submit">Submit</button>
       </form>
-    </React.Fragment>
   );
 }
