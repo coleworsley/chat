@@ -1,11 +1,9 @@
 ## CHAT
----
 
 This is my personal chat application implementation.
 
 
 ## Technologies
----
 
 [React](https://reactjs.org/) <br/>
 [Socket.io](https://socket.io/) <br/>
@@ -14,7 +12,6 @@ This is my personal chat application implementation.
 
 
 ## Development
----
 
 ### To Run:
 1. Clone down the repo
