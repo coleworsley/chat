@@ -10,7 +10,6 @@ export const MessageList = () => {
   useEffect(() => {
 
     socket.on('message', message => {
-      console.log('message', message.message);
       recieveMessage([...messages, message]);
     });
 

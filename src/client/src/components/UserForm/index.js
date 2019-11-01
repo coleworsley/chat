@@ -3,12 +3,10 @@ import './index.css';
 import { UserContext } from '../../context';
 
 export const UserForm = () => {
-  // const []
   const [user, updateUser] = useContext(UserContext);
   const [formData, updateFormData] = useState({ user: user.name });
 
   const handleSubmit = e => {
-
     e.preventDefault();
     updateUser({
       name: formData.user
@@ -17,7 +15,6 @@ export const UserForm = () => {
   };
 
   const handleChange = e => {
-    console.log(formData)
     updateFormData({ ...formData, [e.target.name]: e.target.value});
   }
 

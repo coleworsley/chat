@@ -5,13 +5,13 @@ import './index.css';
 export const MessageForm = () => {
   const [message, addMessage] = useState('');
   const { socket } = useContext(SocketContext);
-  const { name } = useContext(UserContext);
-
+  const [user] = useContext(UserContext);
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     socket.emit('message', {
       message,
-      name
+      name: user.name
     });
     addMessage('');
   };
