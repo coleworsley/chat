@@ -1,3 +1,23 @@
-.Message {
-  text-align: center;
+.UserForm {
+  height: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #eceeee;
 }
+
+.UserForm-input {
+  padding: 1em;
+}
+
+/* position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -100%);
+width: 70vw;
+padding: .25rem 0;
+line-height: 3.6rem;
+text-align: center;
+pointer-events: none;
+cursor: pointer;
+transition: opacity .4s .3s; */

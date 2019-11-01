@@ -20,14 +20,21 @@ export const UserForm = () => {
 
   return (
     <form className="UserForm" onSubmit={e => handleSubmit(e)}>
+      <label
+        htmlFor="user"
+        className="UserForm-label"
+      >
+        Username:
+      </label>
       <input
+        className="UserForm-input"
         id="user"
         name="user"
         type="text"
+        placeholder="Type your name"
         value={formData.user}
         onChange={e => handleChange(e)}
       />
-      <button type="submit">Submit</button>
     </form>
   );
 }

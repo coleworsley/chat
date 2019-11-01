@@ -9,12 +9,10 @@ const App = () => {
     <UserProvider>
       <div className="App">
         <header className="App-header">
-          <h1>Welcome to the <em>CHAT</em></h1>
+          <h1>Let&apos;s <em>CHAT</em></h1>
         </header>
-        <aside>
+        <main className="App-main">
           <UserForm />
-        </aside>
-        <main>
           <Messages />
         </main>
       </div>
