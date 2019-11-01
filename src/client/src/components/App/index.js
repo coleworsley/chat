@@ -1,20 +1,24 @@
 import React from 'react';
 import './index.css';
-import { UserContext, defaultUser } from '../../context';
+import { UserProvider } from '../../provider';
 import { Messages } from '../Messages';
+import { UserForm } from '../UserForm';
 
 const App = () => {
   return (
-    <UserContext.Provider value={defaultUser}>
+    <UserProvider>
       <div className="App">
         <header className="App-header">
           <h1>Welcome to the <em>CHAT</em></h1>
         </header>
+        <aside>
+          <UserForm />
+        </aside>
         <main>
           <Messages />
         </main>
       </div>
-    </UserContext.Provider>
+    </UserProvider>
   );
 }
 
