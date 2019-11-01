@@ -1,9 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { Message } from './index.js';
+import { shallow } from 'enzyme';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<Message />, div);
-  ReactDOM.unmountComponentAtNode(div);
+describe('MessageForm', () => {
+  let container;
+  beforeEach(() => {
+    container = shallow(<Message />);
+  });
+
+  it('renders', () => {
+    expect(container).toBeDefined();
+  });
 });

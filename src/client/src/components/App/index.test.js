@@ -1,9 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import App from './index.js';
+import { shallow } from 'enzyme';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+describe('App', () => {
+  let container;
+  beforeEach(() => {
+    container = shallow(<App />);
+  });
+
+  it('renders', () => {
+    expect(container).toBeDefined();
+  });
 });

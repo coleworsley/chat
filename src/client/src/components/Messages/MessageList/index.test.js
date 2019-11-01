@@ -1,9 +1,35 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { shallow, mount } from 'enzyme';
+import { SocketContext } from '../../../context';
 import { MessageList } from './index.js';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<MessageList />, div);
-  ReactDOM.unmountComponentAtNode(div);
+describe('Message List - Shallow', () => {
+  let container;
+  beforeEach(() => {
+    container = shallow(<MessageList />);
+  });
+
+  it('renders', () => {
+    expect(container).toBeDefined();
+  });
+});
+
+const socketMock = {
+  on: jest.fn(),
+  off: jest.fn()
+};
+
+describe('Message List - Mount', () => {
+  let container;
+  beforeEach(() => {
+    container = mount(
+      <SocketContext.Provider value={{ socket: socketMock }}>
+        <MessageList />
+      </SocketContext.Provider>
+    )
+  });
+
+  it('renders', () => {
+    expect(container).toBeDefined();
+  });
 });
