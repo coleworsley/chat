@@ -3,4 +3,46 @@
   bottom: 0;
   left: 0;
   right: 0;
+  padding: 1em;
+  height: 10vh;
+  display: flex;
+  background: #f4f4f4;
+  align-items: center;
+  font-size: 14px;
+  box-shadow: 2px 2px 5px 1px #3b3b3b;
+  transition: .3s;
+}
+
+.MessageForm-input {
+  font-size: 18px;
+  flex-grow: 1;
+  margin: 10px;
+  padding: 5px;
+  border: none;
+  border-radius: 4px;
+  background-color: inherit;
+  box-shadow: 1px 1px 2px #626161;
+}
+
+.MessageForm-input:focus {
+  outline: none;
+  background-color: #fefefe;
+  box-shadow: 1px 2px 5px #3b3b3b;
+}
+
+.MessageForm-button {
+  background-color: #082dcc;
+  border: none;
+  border-radius: 5px;
+  color: #fefefe;
+  padding: 10px;
+}
+
+.MessageForm-button:hover {
+  box-shadow: 1px 2px 5px 2px #062091;
+}
+
+.MessageForm-button:active,
+.MessageForm-button:focus {
+  outline: none;
 }

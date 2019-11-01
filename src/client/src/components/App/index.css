@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  max-width: 600px;
+  position: relative;
 }
 
 .App-header {
