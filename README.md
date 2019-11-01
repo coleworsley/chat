@@ -5,7 +5,7 @@ This is my personal chat application implementation. It is a simple chat room ap
 
 ## Technologies
 
-The primary technologies I used in this project were the following
+The primary technologies I used in this project were the following <br/>
 [React](https://reactjs.org/) <br/>
 [Socket.io](https://socket.io/) <br/>
 [Node](https://nodejs.org/en/) <br/>
