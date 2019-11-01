@@ -1,16 +1,22 @@
-.Message {
-
+.Message h3,
+.message p {
+  padding: 2px;
+  margin: 0;
 }
 
 .Message-box {
   width: 100px;
   max-width: 45%;
   border-radius: 5px;
-  background-color:
+  background-color: #5f76d7;
+  color: #fff;
+  padding: 5px;
+  margin: 5px;
 }
 
 .my-message {
   background-color: #f4f4f4;
   margin-right: 0;
   margin-left: auto;
+  color: inherit;
 }
