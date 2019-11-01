@@ -1,6 +1,6 @@
 ## CHAT
 
-This is my personal chat application implementation.
+This is my personal chat application implementation. It is a simple chat room application with websockets. A user can pick a UserName (or a random one will be assigned) and send messages to anyone on the server.
 
 
 ## Technologies
